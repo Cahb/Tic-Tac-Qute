@@ -14,6 +14,7 @@ Mind that in order to run the app you'll need all the .dll's and the images ( in
 -The port that is beign binded is 55555 - so mind if your network hardware allows you to connect on that port (e.g if it's opened and whether it's accessible)
 
 -If your network doesn't allow you to use that port, you can still run two examples of the program on your local machine and simply connect to your localhost (that's the way i tested it out)
+
 /*
   Project was compiled using the Desktop Qt 5.7.0 MinGW 32bit on Win7 x64 with the Intel Pentium G3240 Processor
 */
