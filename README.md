@@ -9,7 +9,7 @@ Mind that in order to run the app you'll need all the .dll's and the images ( in
 
 *Description:*
 
--The project is using network utilities - TCP socket's to be more specific;
+-The project is using network protocols - Transport Control Protocol be more specific which was implemented using the QTcpSocket and QTcpServer objects;
 
 -The port that is beign binded is 55555 - so mind if your network hardware allows you to connect on that port (e.g if it's opened and whether it's accessible)
 
