@@ -1,4 +1,5 @@
 # Tic-Tac-Qute
+#QtFramework, #QT, #QtNetwork, #QtWidgets
 Tic-Tac-Toe project i've created using the QT framework.
 It was compiled using the Desktop Qt 5.7.0 MinGW 32bit.
 It was poorly commented - for what i'm sorry - but still, it is one of my first projects using the Qt and the first project to be posted on GitHub.
