@@ -37,21 +37,6 @@ void Network::GetPlayingFormPointer(PlayingForm *pointer)
     connect(this, SIGNAL(OpenPlayingForm()), playing_form, SLOT(onCreateWindow()));
 }
 
-/*
-void Network::ErrorWindowOkClicked()
-{
-    disconnect(message, SIGNAL(Clicked()),this, SLOT(ErrorWindowOkClicked()));
-    SendData(qint64(1),QByteArray("-"),Message::CloseMessage);
-    playing_form->initStates();
-    *count = int(0);
-    if(*isserver == true)
-    {
-        *ismoving = (*model=='X'?true:false);
-        SendData(qint64(1),QByteArray(*ismoving?"0":"1"),Message::ApplyMove);
-        playing_form->setMove(*ismoving);
-    }
-}*/
-
 bool Network::getMove()
 {
     return *ismoving;
@@ -126,14 +111,11 @@ bool Network::SetupServer()
 
 bool Network::InitializeParams()
 {
-     qDebug() << "127";
     int random_number = 0;
     srand(time(NULL));
     random_number = rand()%100;
-     qDebug() << "131";
      qDebug() << (random_number<=50?"X":"O") << random_number;
      *model = (random_number<=50?'X':'O');
-     qDebug() << "133";
     *ismoving = (*model=='X'?true:false);
     *score = 0;
     playing_form->SetRemoteModelIcon(*model=='X'?'O':'X');
@@ -183,13 +165,6 @@ void Network::disconnected()
         server->deleteLater();
     }
     socket->deleteLater();
-    /*
-    ErrorWind *wnd = new ErrorWind("DISCONNECTED","LOST CONNECTION");
-    connect(wnd, &ErrorWind::Clicked, this, [wnd,this]() // lambda was used to simplify binding
-
-    {
-        playing_form->close();
-    });*/
 }
 
 bool Network::sendPing()
